@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #621402;
   font-family: 'Roboto', sans-serif;
+  color: #fff;
 }
 .header {
+  background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%),
+    url('../img/bg-img1.jpg') no-repeat center top/cover;
+  min-height: 100vh;
+}
+.navbar {
   display: flex;
   align-items: center;
   padding-top: 30px;
@@ -38,4 +48,144 @@ body {
   height: 33px;
   border-radius: 50%;
   margin-left: 11px;
+}
+
+.film {
+  color: #fff;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.film-title-small {
+  opacity: 0.5;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.film-title {
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 11px;
+  margin-bottom: 23px;
+}
+
+.film-description {
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 560px;
+}
+
+.film-trailer {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 1035px;
+  top: 256px;
+  margin: auto;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  margin-right: 34px;
+}
+
+.time-icon {
+  margin-right: 14px;
+}
+
+.raiting {
+  display: flex;
+  align-items: center;
+}
+
+.raiting-current {
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.raiting-icon {
+  margin-right: 12px;
+}
+
+.film-details {
+  display: flex;
+  align-items: center;
+  margin-top: 51px;
+}
+
+.choose-day-place {
+  margin-top: 67px;
+  padding-top: 46px;
+  padding-bottom: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.date-block {
+  display: flex;
+}
+
+.date-block-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  text-align: center;
+  width: 90px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.section-lable {
+  display: block;
+  margin-bottom: 20px;
+}
+.month {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.day {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.week {
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 22px;
+}
+
+.date-block-item:hover {
+  background-color: #fe8e05;
+  color: #621402;
+}
+
+.cinema-sel,
+.cinema-sel-time {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+  padding: 18px;
+}
+
+.cinema-sel-time {
+  position: absolute;
+  width: 108px;
+  height: 60px;
+  top: 678px;
+  margin-top: 21px;
 }
