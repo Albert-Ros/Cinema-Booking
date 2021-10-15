@@ -1,17 +1,19 @@
-const schemeSvg = document.querySelector('.schemeSvg')
-const totalPriceTag = document.querySelector('.total-price')
-let unitPrice = 500,
-  totalPrice = 0,
-  countPlace = 0
+const schemeSvg = document.querySelector('.scheme-svg');
+const totalPriceTag = document.querySelector('.price-total');
+const menuButton = document.querySelector('.m-menu');
+const menu = document.querySelector('.menu');
+let cost = 300;
+let totalPrice = 0;
 schemeSvg.addEventListener('click', (event) => {
   if (!event.target.classList.contains('booked')) {
-    if (!event.target.classList.contains('light')) {
-      if (!event.target.classList.contains('schemeSvg')) {
-        event.target.classList.toggle('active')
-        countPlace = document.querySelectorAll('.active').length
-        totalPrice = unitPrice * countPlace
-        totalPriceTag.textContent = totalPrice
-      }
-    }
+    event.target.classList.toggle('active');
+    let totalSeats = schemeSvg.querySelectorAll('.active').length
+    totalPrice = totalSeats * cost;
+    totalPriceTag.textContent = totalPrice;
+  
   }
-})
+});
+menuButton.addEventListener('click', () => {
+  console.log('Кликнули по меню');
+  menu.classList.toggle('is-open');
+});
